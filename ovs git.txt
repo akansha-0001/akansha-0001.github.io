@@ -1,0 +1,69 @@
+﻿Open DayLight 
+
+
+sudo apt-get update and sudo apt-get upgrade.
+sudo apt install openjdk-8-jdk openjdk-8-jre
+java -version
+ To set JAVA_HOME,
+sudo nano /etc/environment
+Type in the first line
+JAVA_HOME=”/usr/lib/jvm/java-8-openjdk-amd64”
+JRE_HOME=”/usr/lib/jvm/java-8-openjdk-amd64/jre”
+Ctrl + S then Ctrl + X
+To display JAVA_HOME echo $JAVA_HOME
+If nothing appears then set it with this:
+Command - export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
+./bin/karaf
+feature:install odl-dlux-core
+feature:install odl-dluxapps-nodes
+feature:install odl-dluxapps-topology
+feature:install odl-dluxapps-yangui
+feature:install odl-dluxapps-yangvisualizer
+feature:install odl-dluxapps-yangman
+feature:install odl-dlux-all
+feature:install odl-restconf odl-l2switch-switch odl-mdsal-apidocs 
+feature:install odl-l2switch-all odl-l2switch-switch-ui
+feature:install odl-vtn-manager-neutron odl-neutron-service odl-neutron-hostconfig-ovs
+feature:install odl-ovsdb-library odl-restconf-all odl-ovsdb-southbound-api odl-ovsdb-southbound-impl odl-ovsdb-southbound-impl-rest
+“ip add:8181/index.html”, Username and password : admin, admin.
+
+
+
+
+OVS in ODL
+
+
+feature:list | grep openflow
+feature:list | grep ovsdb        
+
+
+feature:install odl-netvirt-openstack.
+
+
+apt-get install openswitch-switch.
+
+
+sudo ovs-vsctl set-fail-node br0 secure.
+
+
+netstat -a | grep 6653 and netstat -a | grep 6640
+
+
+sudo /etc/init.d/openvswitch-switch start 
+sudo /etc/init.d/openvswitch-switch status
+sudo ovs-vsctl show
+
+
+ovs-vsctl set-manager tcp:<controller-IP>:6640
+ovs-vsctl set-controller <bridge name> tcp:<controller-IP>:6653
+sudo ovs-vsctl show 
+Note : <controller-IP> is the Host Machine’s Ip address.
+
+
+netstat -a | grep 6653 and netstat -a | grep 6640
+
+
+sudo ovs-ofctl show br-int -OOpenFlow13
+
+
+“ip add:8181/index.html”. In the “Topology” section

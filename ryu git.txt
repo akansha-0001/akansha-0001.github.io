@@ -1,0 +1,35 @@
+﻿Ryu
+
+
+sudo apt-get update and sudo apt-get upgrade
+sudo apt-get install git python3-pip python3-dev
+python3 --version and pip3 --version.
+sudo apt-get install python3-eventlet python3-route python3-webob python3-paramiko.
+sudo mkdir ~/project. 
+cd project
+sudo git clone --dept=1 https://github.com/osrg/ryu.git. 
+sudo pip3 install setuptools --upgrade
+pip3 --version
+cd ryu
+sudo python3 ./setup.py install
+sudo pip3 install six --upgrade
+sudo pip3 install oslo.config msgpack-python
+sudo pip3 install -r tools/pip-requires
+ryu-manager --version
+
+
+Mininet 
+
+
+If the authority error exists then type,
+mininet@mininet-vm:~$ ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no -X mininet@192.168.183.138
+sudo mn --controller=remote,ip=192.168.183.138 --mac --arp
+Floodlight
+sudo mn --controller=remote,ip=192.168.234.129 --topo=single,3
+http://<ip-add of ubuntu VM>:8080/ui/index.html
+
+
+Onos
+In the ./bin navigate to ./onos-service to start ONOS
+Browser : localhost:8181/onos/ui/login.html
+username and password : onos , rocks
