@@ -20,10 +20,10 @@ ryu-manager --version
 
 Mininet 
 
-
 If the authority error exists then type,
 mininet@mininet-vm:~$ ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no -X mininet@192.168.183.138
 sudo mn --controller=remote,ip=192.168.183.138 --mac --arp
+
 Floodlight
 sudo mn --controller=remote,ip=192.168.234.129 --topo=single,3
 http://<ip-add of ubuntu VM>:8080/ui/index.html
