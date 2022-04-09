@@ -40,20 +40,22 @@ feature:install odl-netvirt-openstack
 
 sudo apt-get install openvswitch-switch
 
-sudo ovs-vsctl set-fail-node br0 secure
+sudo ovs-vsctl set-fail-mode br0 secure
 
-netstat -a | grep 6653 and netstat -a | grep 6640
+netstat -a | grep 6653
+netstat -a | grep 6640
 
 sudo /etc/init.d/openvswitch-switch start 
 sudo /etc/init.d/openvswitch-switch status
 sudo ovs-vsctl show
 
-ovs-vsctl set-manager tcp:<controller-IP>:6640
-ovs-vsctl set-controller <bridge name> tcp:<controller-IP>:6653
+sudo ovs-vsctl set-manager tcp:<controller-IP>:6640
+sudo ovs-vsctl set-controller <bridge name> tcp:<controller-IP>:6653
 sudo ovs-vsctl show 
 Note : <controller-IP> is the Host Machine’s Ip address.
 
-netstat -a | grep 6653 and netstat -a | grep 6640
+netstat -a | grep 6653
+netstat -a | grep 6640
 
 sudo ovs-ofctl show br-int -OOpenFlow13
 
