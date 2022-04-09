@@ -36,11 +36,11 @@ OVS in ODL
 feature:list | grep openflow
 feature:list | grep ovsdb        
 
-feature:install odl-netvirt-openstack.
+feature:install odl-netvirt-openstack
 
-apt-get install openswitch-switch.
+sudo apt-get install openvswitch-switch
 
-sudo ovs-vsctl set-fail-node br0 secure.
+sudo ovs-vsctl set-fail-node br0 secure
 
 netstat -a | grep 6653 and netstat -a | grep 6640
 
