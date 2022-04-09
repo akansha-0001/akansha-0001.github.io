@@ -49,8 +49,8 @@ sudo /etc/init.d/openvswitch-switch start
 sudo /etc/init.d/openvswitch-switch status
 sudo ovs-vsctl show
 
-sudo ovs-vsctl set-manager tcp:<controller-IP>:6640
-sudo ovs-vsctl set-controller <bridge name> tcp:<controller-IP>:6653
+sudo ovs-vsctl set-manager tcp:192.168.234.129:6640
+sudo ovs-vsctl set-controller br-int tcp:192.168.234.129:6653
 sudo ovs-vsctl show 
 Note : <controller-IP> is the Host Machine’s Ip address.
 
