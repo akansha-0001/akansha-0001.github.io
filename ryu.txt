@@ -1,6 +1,5 @@
 ﻿Ryu
 
-
 sudo apt-get update and sudo apt-get upgrade
 sudo apt-get install git python3-pip python3-dev
 python3 --version and pip3 --version.
@@ -16,6 +15,9 @@ sudo pip3 install six --upgrade
 sudo pip3 install oslo.config msgpack-python
 sudo pip3 install -r tools/pip-requires
 ryu-manager --version
+In mininet, $ sudo mn --controller remote --topo tree,depth=3
+$ PYTHONPATH=. ./bin/ryu run --observe-links ryu/app/gui_topology/gui_topology.py
+Access http://<ip address of ryu host>:8080 with your web browser
 
 
 Mininet 
@@ -25,6 +27,7 @@ mininet@mininet-vm:~$ ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecki
 sudo mn --controller=remote,ip=192.168.183.138 --mac --arp
 
 Floodlight
+In floodlight dir, sudo apt install ant
 sudo mn --controller=remote,ip=192.168.234.129 --topo=single,3
 http://<ip-add of ubuntu VM>:8080/ui/index.html
 
