@@ -26,6 +26,5 @@ Sample programs :
 var="Hello World" 
 # print it  
 echo "$var"
- SANDEEP KADU || SDN || PAGE NO : 16 
 # Another way of printing it 
 printf "%s\n" "$var"
