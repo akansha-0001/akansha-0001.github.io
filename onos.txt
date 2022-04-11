@@ -6,12 +6,13 @@ mininet@mininet-vm:~$ ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecki
 sudo mn --controller=remote,ip=192.168.183.138 --mac --arp
 
 Floodlight
+sudo apt-get install openjdk-8-jdk
 In floodlight dir, sudo apt install ant
 ant
 java -jar target/floodlight.jar
+ssh -X mininet@192.168.234.130
 sudo mn --controller=remote,ip=192.168.234.129 --topo=single,3
 http://<ip-add of ubuntu VM>:8080/ui/index.html
-
 
 Onos
 In the ./bin navigate to ./onos-service to start ONOS
