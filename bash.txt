@@ -1,32 +1,55 @@
 Bash script
 
 Open text editor and save the file with .sh; run in terminal
-
-code :
-
-. #!/bin/bash 
-var="Hello World" 
-# Run date and hostname command and store output to shell variables now="$(date)" 
-computer_name="$(hostname)" 
-# 
-# print it or use the variable 
-# Variable names are case sensitive $now and $NOW are different names # 
-echo "$var" 
-echo "Current date and time : $now" 
-echo "Computer name : $computer_name"
+chmod +x file1.sh
+to execute : ./file1.sh
 
 Sample programs :
 
 #!/bin/bash 
-# Usage: Hello World Bash Shell Script Using Variables 
-# Author: sandeep kadu 
-# ------------------------------------------------- 
-# Define bash shell variable called var  
-# Avoid spaces around the assignment operator (=) 
 var="Hello World" 
-# print it  
+now="$(date)"
+computer_name="$(hostname)"
 echo "$var"
-# Another way of printing it 
-printf "%s\n" "$var"
+echo "Current date and time is : $now"
+echo "Computer name is : $computer_name"
 
 https://www.log2base2.com/shell-script-examples/loop/shell-script-to-find-factorial-of-a-number.html
+
+#shell script for factorial of a number
+#factorial using while loop
+echo "Enter a number"
+read num
+fact=1
+while [ $num -gt 1 ]
+do
+  fact=$((fact * num))  #fact = fact * num
+  num=$((num - 1))      #num = num - 1
+done
+echo $fact
+
+#shell program to add two variables
+var1=10
+var2=20
+sum=$(($var1 + $var2))
+echo $sum
+
+# Program for Fibonacci
+# Series
+# Static input fo N
+N=6
+# First Number of the
+# Fibonacci Series
+a=0
+# Second Number of the
+# Fibonacci Series
+b=1
+echo "The Fibonacci series is : "
+for (( i=0; i<N; i++ ))
+do
+	echo -n "$a "
+	fn=$((a + b))
+	a=$b
+	b=$fn
+done
+# End of for loop
