@@ -28,3 +28,5 @@ var="Hello World"
 echo "$var"
 # Another way of printing it 
 printf "%s\n" "$var"
+
+https://www.log2base2.com/shell-script-examples/loop/shell-script-to-find-factorial-of-a-number.html
