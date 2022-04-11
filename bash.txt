@@ -34,8 +34,7 @@ var2=20
 sum=$(($var1 + $var2))
 echo $sum
 
-# Program for Fibonacci
-# Series
+# Program for Fibonacci Series
 # Static input fo N
 N=6
 # First Number of the
