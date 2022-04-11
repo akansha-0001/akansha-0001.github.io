@@ -1,0 +1,5 @@
+
+ssh -X mininet@192.168.183.138
+If the authority error exists then type,
+mininet@mininet-vm:~$ ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no -X mininet@192.168.183.138
+sudo mn --controller=remote,ip=192.168.183.138 --mac --arp
