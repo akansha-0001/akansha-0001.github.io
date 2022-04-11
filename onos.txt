@@ -18,3 +18,8 @@ Onos
 In the ./bin navigate to ./onos-service to start ONOS
 Browser : localhost:8181/onos/ui/login.html
 username and password : onos , rocks
+
+Wireshark
+sudo add-apt-repository ppa:wireshark-dev/stable
+sudo apt update
+sudo apt install wireshark
