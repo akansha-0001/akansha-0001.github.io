@@ -23,24 +23,3 @@ ryu-manager --observe-links ryu.app.simple_switch ryu.app.gui_topology.gui_topol
 In mininet, 
 sudo mn --controller=remote,ip=192.168.142.131 --topo tree,depth=3
 Access http://<ip address of ryu host>:8080 with your web browser
-
-
-Mininet 
-
-If the authority error exists then type,
-ssh -X mininet@192.168.183.138
-mininet@mininet-vm:~$ ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no -X mininet@192.168.183.138
-sudo mn --controller=remote,ip=192.168.183.138 --mac --arp
-
-Floodlight
-In floodlight dir, sudo apt install ant
-ant
-java -jar target/floodlight.jar
-sudo mn --controller=remote,ip=192.168.234.129 --topo=single,3
-http://<ip-add of ubuntu VM>:8080/ui/index.html
-
-
-Onos
-In the ./bin navigate to ./onos-service to start ONOS
-Browser : localhost:8181/onos/ui/login.html
-username and password : onos , rocks
