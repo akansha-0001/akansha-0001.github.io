@@ -1,22 +1,27 @@
 ﻿Ryu
 
+sudo apt-get install git
 sudo apt-get update and sudo apt-get upgrade
-sudo apt-get install git python3-pip python3-dev
-python3 --version and pip3 --version.
-sudo apt-get install python3-eventlet python3-route python3-webob python3-paramiko.
-sudo mkdir ~/project. 
+sudo apt-get -y install git python3-pip python3-dev
+python3 --version
+pip3 --version.
+sudo apt-get -y install python3-eventlet python3-routes python3-webob python3-paramiko
+sudo mkdir ~/project 
 cd project
-sudo git clone --dept=1 https://github.com/osrg/ryu.git. 
+sudo git clone --dept=1 https://github.com/osrg/ryu.git
 sudo pip3 install setuptools --upgrade
 pip3 --version
 cd ryu
 sudo python3 ./setup.py install
 sudo pip3 install six --upgrade
 sudo pip3 install oslo.config msgpack-python
+sudo pip3 install eventlet --upgrade
 sudo pip3 install -r tools/pip-requires
+sudo python3 setup.py install ( Do if you are not able to view ryu-manager)
 ryu-manager --version
-In mininet, $ sudo mn --controller remote --topo tree,depth=3
-$ PYTHONPATH=. ./bin/ryu run --observe-links ryu/app/gui_topology/gui_topology.py
+ryu-manager --observe-links ryu.app.simple_switch ryu.app.gui_topology.gui_topology
+In mininet, 
+sudo mn --controller=remote,ip=192.168.142.131 --topo tree,depth=3
 Access http://<ip address of ryu host>:8080 with your web browser
 
 
